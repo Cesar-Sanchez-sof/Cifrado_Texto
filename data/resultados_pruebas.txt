@@ -1,0 +1,125 @@
+================================================================================
+REPORTE DE EJECUCION DE PRUEBAS DE CIFRADO SIMETRICO (DES, 3DES, AES)
+Fecha: 2026-09-25T17:28:57.889059
+================================================================================
+
+--- CASO TC-01: Texto estándar de longitud mínima requerida ---
+Longitud: 60 caracteres
+
+  [ALGORITMO]: DES (64 bits)
+    * Clave (HEX):        2BB35B24749ACEA6
+    * IV (HEX):           C5090066F2BCFA16
+    * Texto Original:     Criptografia Simetrica en Python 2026 - Proteccion de Datos.
+    * Criptograma (HEX):  6E22C191B901BBBD6A4DD451449103B306A3CD4FAAFCCC9F95C97D8E2CA9F41B3D888C539DFAEDCE82694D60158FB1C971340A10E5EB7BB91AE842786F7E9CE5
+    * Texto Descifrado:   Criptografia Simetrica en Python 2026 - Proteccion de Datos.
+    * Verificacion:       EXITOSA [100% IDENTICO]
+    * Tiempo Cifrado:     323.8 us
+    * Tiempo Descifrado:  17.8 us
+    * Tiempo Total:       341.6 us
+
+  [ALGORITMO]: 3DES (192 bits)
+    * Clave (HEX):        C2463883CDFB8638B679B6CE8C2ABFCBA88C91CE9B2F8334
+    * IV (HEX):           E126FD68B4D3CC6D
+    * Texto Original:     Criptografia Simetrica en Python 2026 - Proteccion de Datos.
+    * Criptograma (HEX):  CBF4F4A829EBB714B48DC4A05F4978CBB6B65452CFBB851A4DF08EC19E778BA02009C40B6106894429277A09E756A629F4B0F80597ECDF15BF33E54E4AD288E2
+    * Texto Descifrado:   Criptografia Simetrica en Python 2026 - Proteccion de Datos.
+    * Verificacion:       EXITOSA [100% IDENTICO]
+    * Tiempo Cifrado:     15.4 us
+    * Tiempo Descifrado:  5.9 us
+    * Tiempo Total:       21.3 us
+
+  [ALGORITMO]: AES (256 bits)
+    * Clave (HEX):        430F447AB1F99CCB75642CB02A6BF5BC8EEB0286E5988AA6B08DE3D2E6D339DB
+    * IV (HEX):           42A1FD8253489275A2433E3D61838B87
+    * Texto Original:     Criptografia Simetrica en Python 2026 - Proteccion de Datos.
+    * Criptograma (HEX):  B976D8A9331FD37E390E22060AD8D92C717A0857E94F44D1060FDF27C4BC9F5CDFD0C0362763F63779FE1D9F65E7DE3EEE7EDC07A34374947D7CAFBFD1BB1C11
+    * Texto Descifrado:   Criptografia Simetrica en Python 2026 - Proteccion de Datos.
+    * Verificacion:       EXITOSA [100% IDENTICO]
+    * Tiempo Cifrado:     2.9 us
+    * Tiempo Descifrado:  3.8 us
+    * Tiempo Total:       6.7 us
+
+--------------------------------------------------------------------------------
+
+--- CASO TC-02: Texto con caracteres especiales en español (tildes, ñ, signos) ---
+Longitud: 91 caracteres
+
+  [ALGORITMO]: DES (64 bits)
+    * Clave (HEX):        8804E22AC6F45B6B
+    * IV (HEX):           071D26B3BA7624C0
+    * Texto Original:     ¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.
+    * Criptograma (HEX):  5B1AD55B7D934CAAB25EC324B3FC89B76C7E1FC1CFFB5D7AEA4DCF72ACF8F7CB4AF2CFAB61304B9645D2793B5BB1EBEB172ED2880C00D14920F10675C83578159B6D6B033FC61C487E4E57DB9ACD43C5C38D95EDE6ABFCEFE4405C618A8B13CE0985D8CD8413C6EF
+    * Texto Descifrado:   ¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.
+    * Verificacion:       EXITOSA [100% IDENTICO]
+    * Tiempo Cifrado:     5.6 us
+    * Tiempo Descifrado:  4.8 us
+    * Tiempo Total:       10.4 us
+
+  [ALGORITMO]: 3DES (192 bits)
+    * Clave (HEX):        8F13EA3E04EC152098A7AE10C4C8FD61E3293D191CC48CEF
+    * IV (HEX):           0DA33A73C827F9E2
+    * Texto Original:     ¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.
+    * Criptograma (HEX):  78381F7A427B08F5FAFBD4D29F73B61E741568000D7540A074C2B9313E44ACA33F7BE13DAA4381CC93141557C97C1F5E189CF7FB37B70AF68393A05A69D195FAF4AACEC8E1FB697B9C234F9B6B16FDCAAF65EB3500C6C3FEEEFD02DD6F547FA4226ED51BEE5553DF
+    * Texto Descifrado:   ¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.
+    * Verificacion:       EXITOSA [100% IDENTICO]
+    * Tiempo Cifrado:     6.0 us
+    * Tiempo Descifrado:  6.1 us
+    * Tiempo Total:       12.1 us
+
+  [ALGORITMO]: AES (256 bits)
+    * Clave (HEX):        466330CBE84A81CF359DA02977DA9582D454171650C4FEAC32B8C6774D3E7F20
+    * IV (HEX):           826658B5DC1577A2191FD7ED4DA64A19
+    * Texto Original:     ¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.
+    * Criptograma (HEX):  D18201107F85344261BC3065CF00D3F4B7A20003407EADA2C356664D275149FE68650B7BED3B63EC4EBD832DD90514FCB9D76EF826145E2E2490A99E7ACCDAAF8F6B0C95614C3B5145ED24EFAA1A5A38025D62DACA40D40D96D6D178994A16F9B86BF267FD9FB7B9FBC322116BBC6C9F
+    * Texto Descifrado:   ¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.
+    * Verificacion:       EXITOSA [100% IDENTICO]
+    * Tiempo Cifrado:     2.6 us
+    * Tiempo Descifrado:  3.8 us
+    * Tiempo Total:       6.4 us
+
+--------------------------------------------------------------------------------
+
+--- CASO TC-03: Texto extenso multi-bloque ---
+Longitud: 357 caracteres
+
+  [ALGORITMO]: DES (64 bits)
+    * Clave (HEX):        4743FD104ACA582A
+    * IV (HEX):           734A77D11D12A0CF
+    * Texto Original:     Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.
+    * Criptograma (HEX):  D5CB6129CA6A9A6E974E1779BBBA7ED140E3DD4A1390607ABB4AA33B0280F9F6EF4FCD3CC2230C7B95311D541D1872677D3872AB3EFCA793FBA46B2BCE25AA8E8216A0E71C49C549DD1BB43A7E3F0B7CB228DB72FA9D064DB6D04D113D95C3CE334F6D2F845805E52CF90A8A96CF71B2F698CFD0C9DB922DEFB1BC69A53991084F62AE634E63446D849D392C59A6C631619F04433CFEC75F54E7D74ED3905768EC09F2E04FD346A63673FA80F0B9F07B2EAEE5968E3B8E2F81E34CBD6018B0D59850176A012B543EC6E0FFB489A1AEFD04AC03CD03CCDB17C902B7C4B8D5E303439A96095D1AB2B508973AD7F113E6EBAF5FE2EDB5E13653A84F0660A9DF270A8332E99D50AD6A468905078AB5376FEB7459CFC4F1CB128D2B96814A18710A844178791DDF91AD8E2BC0843A3E9F5853A82D3EF15A7DA7CB9CBD92B06B358C2BB73E254966FC69D9E6E9E6FE5712F517B2029B65542DAD41EA7E872BCE0307622F40A8630DA8541E
+    * Texto Descifrado:   Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.
+    * Verificacion:       EXITOSA [100% IDENTICO]
+    * Tiempo Cifrado:     6.9 us
+    * Tiempo Descifrado:  6.4 us
+    * Tiempo Total:       13.3 us
+
+  [ALGORITMO]: 3DES (192 bits)
+    * Clave (HEX):        3276735E40BA2337683201386898B9547FDC5EDF7A5B1092
+    * IV (HEX):           CADD503094BA2898
+    * Texto Original:     Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.
+    * Criptograma (HEX):  C9F83121A930D6901A80142188008AB98E7E88C124D9F9575CD56BC39580725E9BAA7772DA9AC5571D7475A7A2137F7E1CE1F5360067FE29D7CB46450AB7221D7F41ED85608D94FF7CE121DB9AEC7F23132643CD726F63DFF1C1B30E135FFE79483FF0AD2951D00FDA5989140362F87CF0D5A852008DBE9DA851BF98208DE8D2927A86C3E93CE474292719C4112B0356D3AD02318A5460580D01E1FC5AD6291DFCA4F997EA2C1912B5967A3B1E6C8273DC1B764924CD9FAE176C19B0B83A84B8E87C9870A3D263B596D5C5FE04078E4914987BF3BC98A481A7413FDF6AB0D58B64133F4B66DEAC61802AF3E7B02EBE772E6E868DB4C761B16B39819C255780CDC9EE54A42DE055455666A67FCDF8268E3DF37F23F20F99DAE95E55F4F6E331C9C580E92F5F7F3017884DB92DD00AA159D559562451F6CD0E7242114974B0529A703CF9FBCA09E610D93A70302E80C9DB4D9CBCDD7EF9F8D0DBE7D6A347DA75A69A58F954F0A42771
+    * Texto Descifrado:   Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.
+    * Verificacion:       EXITOSA [100% IDENTICO]
+    * Tiempo Cifrado:     13.4 us
+    * Tiempo Descifrado:  14.5 us
+    * Tiempo Total:       27.9 us
+
+  [ALGORITMO]: AES (256 bits)
+    * Clave (HEX):        71C3F0BD91729B0361BDDFDF96384329DE86CE5EF4A5A9FAD827224BBECE528A
+    * IV (HEX):           DE31929656ECF33D531E247C0C55283B
+    * Texto Original:     Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.
+    * Criptograma (HEX):  156ACEAD3150E5C72B1F9DB89E101AFD78184450B8DD484D64F06934154518A7775747CD70BA1669C184F1B53C0DCFE612D32CE827E7DE49ADE3E967414F513DB0B622D00D9D1E10297782BF5C4FC4F546290F1FB212B13F3F95D9755F77128737251B11BD5B0F8B0F7B4093334599A97F509FB9C4F5DE7C9DAACD4798575BD9A82725061B66984C6D41A9BE642654E0568245B65D3137308822D7A183288D86C22096C2228F58B5F94A5D820BB80B379CF7ABB7C470096C6032F9E32883F7990A317956DB0A1CE9284300655988312CE7327245A4DDCEF385E935A1B254AEE707022BC674D5956C26BA8CA6A125206004AEA80D23976E3906B9EBCAD1E515F7038F08D28DE7179A632681A6CB79302BA003D93929E7CF5E048A3987471E91CB46985BEA6AE3B14DA861EE291A7F4EF7788A367042B482F8706A969E1E85D9028A2CAD772780D993E013206C26EBF2524BA65D8F05A0EADC5E5874F5717AD208FCA8F780CB8F6F6C994F346B144F3B93
+    * Texto Descifrado:   Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.
+    * Verificacion:       EXITOSA [100% IDENTICO]
+    * Tiempo Cifrado:     3.3 us
+    * Tiempo Descifrado:  4.1 us
+    * Tiempo Total:       7.4 us
+
+--------------------------------------------------------------------------------
+
+================================================================================
+RESUMEN DE BENCHMARK ESTADISTICO (100 ITERACIONES)
+================================================================================
+DES        | Cif:     5.17 us | Dec:     5.89 us | Tot:    11.06 us
+3DES       | Cif:     7.27 us | Dec:     8.14 us | Tot:    15.41 us
+AES        | Cif:     2.70 us | Dec:     3.61 us | Tot:     6.31 us

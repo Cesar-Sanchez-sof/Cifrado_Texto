@@ -1,0 +1,1609 @@
+{
+    "metadatos": {
+        "fecha_ejecucion": "2026-09-25T17:28:57.889059",
+        "version_python": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+        "sistema_operativo": "win32",
+        "modo_cifrado": "CBC con relleno PKCS#7"
+    },
+    "casos_prueba": [
+        {
+            "caso_id": "TC-01",
+            "descripcion": "Texto estándar de longitud mínima requerida",
+            "longitud_caracteres": 60,
+            "longitud_bytes_utf8": 60,
+            "ejecuciones": [
+                {
+                    "algoritmo": "DES",
+                    "texto_original": "Criptografia Simetrica en Python 2026 - Proteccion de Datos.",
+                    "clave_hex": "2BB35B24749ACEA6",
+                    "iv_hex": "C5090066F2BCFA16",
+                    "texto_cifrado_hex": "6E22C191B901BBBD6A4DD451449103B306A3CD4FAAFCCC9F95C97D8E2CA9F41B3D888C539DFAEDCE82694D60158FB1C971340A10E5EB7BB91AE842786F7E9CE5",
+                    "texto_descifrado": "Criptografia Simetrica en Python 2026 - Proteccion de Datos.",
+                    "coincide": true,
+                    "tamano_clave_bits": 64,
+                    "tamano_bloque_bits": 64,
+                    "tiempo_cifrado_us": 323.8,
+                    "tiempo_descifrado_us": 17.8,
+                    "tiempo_total_us": 341.6,
+                    "analisis": {
+                        "longitud_caracteres": 60,
+                        "longitud_bytes": 60,
+                        "total_bloques": 8,
+                        "bytes_relleno": 4,
+                        "entropia_plano": 4.301,
+                        "entropia_criptograma": 5.844,
+                        "bloques": [
+                            {
+                                "indice": 1,
+                                "hex": "43726970746F6772",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "Criptogr"
+                            },
+                            {
+                                "indice": 2,
+                                "hex": "616669612053696D",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "afia Sim"
+                            },
+                            {
+                                "indice": 3,
+                                "hex": "6574726963612065",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "etrica e"
+                            },
+                            {
+                                "indice": 4,
+                                "hex": "6E20507974686F6E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "n Python"
+                            },
+                            {
+                                "indice": 5,
+                                "hex": "2032303236202D20",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " 2026 - "
+                            },
+                            {
+                                "indice": 6,
+                                "hex": "50726F7465636369",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "Protecci"
+                            },
+                            {
+                                "indice": 7,
+                                "hex": "6F6E206465204461",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "on de Da"
+                            },
+                            {
+                                "indice": 8,
+                                "hex": "746F732E04040404",
+                                "es_relleno": true,
+                                "originales": 4,
+                                "relleno": 4,
+                                "ascii": "tos....."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "algoritmo": "3DES",
+                    "texto_original": "Criptografia Simetrica en Python 2026 - Proteccion de Datos.",
+                    "clave_hex": "C2463883CDFB8638B679B6CE8C2ABFCBA88C91CE9B2F8334",
+                    "iv_hex": "E126FD68B4D3CC6D",
+                    "texto_cifrado_hex": "CBF4F4A829EBB714B48DC4A05F4978CBB6B65452CFBB851A4DF08EC19E778BA02009C40B6106894429277A09E756A629F4B0F80597ECDF15BF33E54E4AD288E2",
+                    "texto_descifrado": "Criptografia Simetrica en Python 2026 - Proteccion de Datos.",
+                    "coincide": true,
+                    "tamano_clave_bits": 192,
+                    "tamano_bloque_bits": 64,
+                    "tiempo_cifrado_us": 15.4,
+                    "tiempo_descifrado_us": 5.9,
+                    "tiempo_total_us": 21.3,
+                    "analisis": {
+                        "longitud_caracteres": 60,
+                        "longitud_bytes": 60,
+                        "total_bloques": 8,
+                        "bytes_relleno": 4,
+                        "entropia_plano": 4.301,
+                        "entropia_criptograma": 5.695,
+                        "bloques": [
+                            {
+                                "indice": 1,
+                                "hex": "43726970746F6772",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "Criptogr"
+                            },
+                            {
+                                "indice": 2,
+                                "hex": "616669612053696D",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "afia Sim"
+                            },
+                            {
+                                "indice": 3,
+                                "hex": "6574726963612065",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "etrica e"
+                            },
+                            {
+                                "indice": 4,
+                                "hex": "6E20507974686F6E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "n Python"
+                            },
+                            {
+                                "indice": 5,
+                                "hex": "2032303236202D20",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " 2026 - "
+                            },
+                            {
+                                "indice": 6,
+                                "hex": "50726F7465636369",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "Protecci"
+                            },
+                            {
+                                "indice": 7,
+                                "hex": "6F6E206465204461",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "on de Da"
+                            },
+                            {
+                                "indice": 8,
+                                "hex": "746F732E04040404",
+                                "es_relleno": true,
+                                "originales": 4,
+                                "relleno": 4,
+                                "ascii": "tos....."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "algoritmo": "AES",
+                    "texto_original": "Criptografia Simetrica en Python 2026 - Proteccion de Datos.",
+                    "clave_hex": "430F447AB1F99CCB75642CB02A6BF5BC8EEB0286E5988AA6B08DE3D2E6D339DB",
+                    "iv_hex": "42A1FD8253489275A2433E3D61838B87",
+                    "texto_cifrado_hex": "B976D8A9331FD37E390E22060AD8D92C717A0857E94F44D1060FDF27C4BC9F5CDFD0C0362763F63779FE1D9F65E7DE3EEE7EDC07A34374947D7CAFBFD1BB1C11",
+                    "texto_descifrado": "Criptografia Simetrica en Python 2026 - Proteccion de Datos.",
+                    "coincide": true,
+                    "tamano_clave_bits": 256,
+                    "tamano_bloque_bits": 128,
+                    "tiempo_cifrado_us": 2.9,
+                    "tiempo_descifrado_us": 3.8,
+                    "tiempo_total_us": 6.7,
+                    "analisis": {
+                        "longitud_caracteres": 60,
+                        "longitud_bytes": 60,
+                        "total_bloques": 4,
+                        "bytes_relleno": 4,
+                        "entropia_plano": 4.301,
+                        "entropia_criptograma": 5.781,
+                        "bloques": [
+                            {
+                                "indice": 1,
+                                "hex": "43726970746F6772616669612053696D",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "Criptografia Sim"
+                            },
+                            {
+                                "indice": 2,
+                                "hex": "65747269636120656E20507974686F6E",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "etrica en Python"
+                            },
+                            {
+                                "indice": 3,
+                                "hex": "2032303236202D2050726F7465636369",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": " 2026 - Protecci"
+                            },
+                            {
+                                "indice": 4,
+                                "hex": "6F6E206465204461746F732E04040404",
+                                "es_relleno": true,
+                                "originales": 12,
+                                "relleno": 4,
+                                "ascii": "on de Datos....."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "caso_id": "TC-02",
+            "descripcion": "Texto con caracteres especiales en español (tildes, ñ, signos)",
+            "longitud_caracteres": 91,
+            "longitud_bytes_utf8": 98,
+            "ejecuciones": [
+                {
+                    "algoritmo": "DES",
+                    "texto_original": "¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.",
+                    "clave_hex": "8804E22AC6F45B6B",
+                    "iv_hex": "071D26B3BA7624C0",
+                    "texto_cifrado_hex": "5B1AD55B7D934CAAB25EC324B3FC89B76C7E1FC1CFFB5D7AEA4DCF72ACF8F7CB4AF2CFAB61304B9645D2793B5BB1EBEB172ED2880C00D14920F10675C83578159B6D6B033FC61C487E4E57DB9ACD43C5C38D95EDE6ABFCEFE4405C618A8B13CE0985D8CD8413C6EF",
+                    "texto_descifrado": "¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.",
+                    "coincide": true,
+                    "tamano_clave_bits": 64,
+                    "tamano_bloque_bits": 64,
+                    "tiempo_cifrado_us": 5.6,
+                    "tiempo_descifrado_us": 4.8,
+                    "tiempo_total_us": 10.4,
+                    "analisis": {
+                        "longitud_caracteres": 91,
+                        "longitud_bytes": 98,
+                        "total_bloques": 13,
+                        "bytes_relleno": 6,
+                        "entropia_plano": 4.685,
+                        "entropia_criptograma": 6.397,
+                        "bloques": [
+                            {
+                                "indice": 1,
+                                "hex": "C2A1536567757269",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "..Seguri"
+                            },
+                            {
+                                "indice": 2,
+                                "hex": "64616420496E666F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "dad Info"
+                            },
+                            {
+                                "indice": 3,
+                                "hex": "726DC3A174696361",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "rm..tica"
+                            },
+                            {
+                                "indice": 4,
+                                "hex": "204176616E7A6164",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " Avanzad"
+                            },
+                            {
+                                "indice": 5,
+                                "hex": "6121204369667261",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "a! Cifra"
+                            },
+                            {
+                                "indice": 6,
+                                "hex": "646F20646520636F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "do de co"
+                            },
+                            {
+                                "indice": 7,
+                                "hex": "6E7472617365C3B1",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ntrase.."
+                            },
+                            {
+                                "indice": 8,
+                                "hex": "61732079206D656E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "as y men"
+                            },
+                            {
+                                "indice": 9,
+                                "hex": "73616A65733A2063",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "sajes: c"
+                            },
+                            {
+                                "indice": 10,
+                                "hex": "61C3B1C3B36E2C20",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "a....n, "
+                            },
+                            {
+                                "indice": 11,
+                                "hex": "C3A172626F6C2C20",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "..rbol, "
+                            },
+                            {
+                                "indice": 12,
+                                "hex": "70696E67C3BC696E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ping..in"
+                            },
+                            {
+                                "indice": 13,
+                                "hex": "6F2E060606060606",
+                                "es_relleno": true,
+                                "originales": 2,
+                                "relleno": 6,
+                                "ascii": "o......."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "algoritmo": "3DES",
+                    "texto_original": "¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.",
+                    "clave_hex": "8F13EA3E04EC152098A7AE10C4C8FD61E3293D191CC48CEF",
+                    "iv_hex": "0DA33A73C827F9E2",
+                    "texto_cifrado_hex": "78381F7A427B08F5FAFBD4D29F73B61E741568000D7540A074C2B9313E44ACA33F7BE13DAA4381CC93141557C97C1F5E189CF7FB37B70AF68393A05A69D195FAF4AACEC8E1FB697B9C234F9B6B16FDCAAF65EB3500C6C3FEEEFD02DD6F547FA4226ED51BEE5553DF",
+                    "texto_descifrado": "¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.",
+                    "coincide": true,
+                    "tamano_clave_bits": 192,
+                    "tamano_bloque_bits": 64,
+                    "tiempo_cifrado_us": 6.0,
+                    "tiempo_descifrado_us": 6.1,
+                    "tiempo_total_us": 12.1,
+                    "analisis": {
+                        "longitud_caracteres": 91,
+                        "longitud_bytes": 98,
+                        "total_bloques": 13,
+                        "bytes_relleno": 6,
+                        "entropia_plano": 4.685,
+                        "entropia_criptograma": 6.359,
+                        "bloques": [
+                            {
+                                "indice": 1,
+                                "hex": "C2A1536567757269",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "..Seguri"
+                            },
+                            {
+                                "indice": 2,
+                                "hex": "64616420496E666F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "dad Info"
+                            },
+                            {
+                                "indice": 3,
+                                "hex": "726DC3A174696361",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "rm..tica"
+                            },
+                            {
+                                "indice": 4,
+                                "hex": "204176616E7A6164",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " Avanzad"
+                            },
+                            {
+                                "indice": 5,
+                                "hex": "6121204369667261",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "a! Cifra"
+                            },
+                            {
+                                "indice": 6,
+                                "hex": "646F20646520636F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "do de co"
+                            },
+                            {
+                                "indice": 7,
+                                "hex": "6E7472617365C3B1",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ntrase.."
+                            },
+                            {
+                                "indice": 8,
+                                "hex": "61732079206D656E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "as y men"
+                            },
+                            {
+                                "indice": 9,
+                                "hex": "73616A65733A2063",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "sajes: c"
+                            },
+                            {
+                                "indice": 10,
+                                "hex": "61C3B1C3B36E2C20",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "a....n, "
+                            },
+                            {
+                                "indice": 11,
+                                "hex": "C3A172626F6C2C20",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "..rbol, "
+                            },
+                            {
+                                "indice": 12,
+                                "hex": "70696E67C3BC696E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ping..in"
+                            },
+                            {
+                                "indice": 13,
+                                "hex": "6F2E060606060606",
+                                "es_relleno": true,
+                                "originales": 2,
+                                "relleno": 6,
+                                "ascii": "o......."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "algoritmo": "AES",
+                    "texto_original": "¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.",
+                    "clave_hex": "466330CBE84A81CF359DA02977DA9582D454171650C4FEAC32B8C6774D3E7F20",
+                    "iv_hex": "826658B5DC1577A2191FD7ED4DA64A19",
+                    "texto_cifrado_hex": "D18201107F85344261BC3065CF00D3F4B7A20003407EADA2C356664D275149FE68650B7BED3B63EC4EBD832DD90514FCB9D76EF826145E2E2490A99E7ACCDAAF8F6B0C95614C3B5145ED24EFAA1A5A38025D62DACA40D40D96D6D178994A16F9B86BF267FD9FB7B9FBC322116BBC6C9F",
+                    "texto_descifrado": "¡Seguridad Informática Avanzada! Cifrado de contraseñas y mensajes: cañón, árbol, pingüino.",
+                    "coincide": true,
+                    "tamano_clave_bits": 256,
+                    "tamano_bloque_bits": 128,
+                    "tiempo_cifrado_us": 2.6,
+                    "tiempo_descifrado_us": 3.8,
+                    "tiempo_total_us": 6.4,
+                    "analisis": {
+                        "longitud_caracteres": 91,
+                        "longitud_bytes": 98,
+                        "total_bloques": 7,
+                        "bytes_relleno": 14,
+                        "entropia_plano": 4.685,
+                        "entropia_criptograma": 6.461,
+                        "bloques": [
+                            {
+                                "indice": 1,
+                                "hex": "C2A153656775726964616420496E666F",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "..Seguridad Info"
+                            },
+                            {
+                                "indice": 2,
+                                "hex": "726DC3A174696361204176616E7A6164",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "rm..tica Avanzad"
+                            },
+                            {
+                                "indice": 3,
+                                "hex": "6121204369667261646F20646520636F",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "a! Cifrado de co"
+                            },
+                            {
+                                "indice": 4,
+                                "hex": "6E7472617365C3B161732079206D656E",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "ntrase..as y men"
+                            },
+                            {
+                                "indice": 5,
+                                "hex": "73616A65733A206361C3B1C3B36E2C20",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "sajes: ca....n, "
+                            },
+                            {
+                                "indice": 6,
+                                "hex": "C3A172626F6C2C2070696E67C3BC696E",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "..rbol, ping..in"
+                            },
+                            {
+                                "indice": 7,
+                                "hex": "6F2E0E0E0E0E0E0E0E0E0E0E0E0E0E0E",
+                                "es_relleno": true,
+                                "originales": 2,
+                                "relleno": 14,
+                                "ascii": "o..............."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "caso_id": "TC-03",
+            "descripcion": "Texto extenso multi-bloque",
+            "longitud_caracteres": 357,
+            "longitud_bytes_utf8": 357,
+            "ejecuciones": [
+                {
+                    "algoritmo": "DES",
+                    "texto_original": "Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.",
+                    "clave_hex": "4743FD104ACA582A",
+                    "iv_hex": "734A77D11D12A0CF",
+                    "texto_cifrado_hex": "D5CB6129CA6A9A6E974E1779BBBA7ED140E3DD4A1390607ABB4AA33B0280F9F6EF4FCD3CC2230C7B95311D541D1872677D3872AB3EFCA793FBA46B2BCE25AA8E8216A0E71C49C549DD1BB43A7E3F0B7CB228DB72FA9D064DB6D04D113D95C3CE334F6D2F845805E52CF90A8A96CF71B2F698CFD0C9DB922DEFB1BC69A53991084F62AE634E63446D849D392C59A6C631619F04433CFEC75F54E7D74ED3905768EC09F2E04FD346A63673FA80F0B9F07B2EAEE5968E3B8E2F81E34CBD6018B0D59850176A012B543EC6E0FFB489A1AEFD04AC03CD03CCDB17C902B7C4B8D5E303439A96095D1AB2B508973AD7F113E6EBAF5FE2EDB5E13653A84F0660A9DF270A8332E99D50AD6A468905078AB5376FEB7459CFC4F1CB128D2B96814A18710A844178791DDF91AD8E2BC0843A3E9F5853A82D3EF15A7DA7CB9CBD92B06B358C2BB73E254966FC69D9E6E9E6FE5712F517B2029B65542DAD41EA7E872BCE0307622F40A8630DA8541E",
+                    "texto_descifrado": "Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.",
+                    "coincide": true,
+                    "tamano_clave_bits": 64,
+                    "tamano_bloque_bits": 64,
+                    "tiempo_cifrado_us": 6.9,
+                    "tiempo_descifrado_us": 6.4,
+                    "tiempo_total_us": 13.3,
+                    "analisis": {
+                        "longitud_caracteres": 357,
+                        "longitud_bytes": 357,
+                        "total_bloques": 45,
+                        "bytes_relleno": 3,
+                        "entropia_plano": 4.439,
+                        "entropia_criptograma": 7.423,
+                        "bloques": [
+                            {
+                                "indice": 1,
+                                "hex": "4C6F7320616C676F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "Los algo"
+                            },
+                            {
+                                "indice": 2,
+                                "hex": "7269746D6F732064",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ritmos d"
+                            },
+                            {
+                                "indice": 3,
+                                "hex": "6520636966726164",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "e cifrad"
+                            },
+                            {
+                                "indice": 4,
+                                "hex": "6F2073696D657472",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "o simetr"
+                            },
+                            {
+                                "indice": 5,
+                                "hex": "69636F20706F7220",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ico por "
+                            },
+                            {
+                                "indice": 6,
+                                "hex": "626C6F7175657320",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "bloques "
+                            },
+                            {
+                                "indice": 7,
+                                "hex": "636F6D6F20444553",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "como DES"
+                            },
+                            {
+                                "indice": 8,
+                                "hex": "2C20334445532079",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": ", 3DES y"
+                            },
+                            {
+                                "indice": 9,
+                                "hex": "2041455320747261",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " AES tra"
+                            },
+                            {
+                                "indice": 10,
+                                "hex": "6E73666F726D616E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "nsforman"
+                            },
+                            {
+                                "indice": 11,
+                                "hex": "20626C6F71756573",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " bloques"
+                            },
+                            {
+                                "indice": 12,
+                                "hex": "206465206461746F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " de dato"
+                            },
+                            {
+                                "indice": 13,
+                                "hex": "73207573616E646F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "s usando"
+                            },
+                            {
+                                "indice": 14,
+                                "hex": "20636C6176657320",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " claves "
+                            },
+                            {
+                                "indice": 15,
+                                "hex": "7365637265746173",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "secretas"
+                            },
+                            {
+                                "indice": 16,
+                                "hex": "20636F6D70617274",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " compart"
+                            },
+                            {
+                                "indice": 17,
+                                "hex": "696461732E20456C",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "idas. El"
+                            },
+                            {
+                                "indice": 18,
+                                "hex": "206D6F646F204342",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " modo CB"
+                            },
+                            {
+                                "indice": 19,
+                                "hex": "4320284369706865",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "C (Ciphe"
+                            },
+                            {
+                                "indice": 20,
+                                "hex": "7220426C6F636B20",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "r Block "
+                            },
+                            {
+                                "indice": 21,
+                                "hex": "436861696E696E67",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "Chaining"
+                            },
+                            {
+                                "indice": 22,
+                                "hex": "2920676172616E74",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": ") garant"
+                            },
+                            {
+                                "indice": 23,
+                                "hex": "697A612071756520",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "iza que "
+                            },
+                            {
+                                "indice": 24,
+                                "hex": "626C6F7175657320",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "bloques "
+                            },
+                            {
+                                "indice": 25,
+                                "hex": "6964656E7469636F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "identico"
+                            },
+                            {
+                                "indice": 26,
+                                "hex": "7320646520746578",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "s de tex"
+                            },
+                            {
+                                "indice": 27,
+                                "hex": "746F20706C616E6F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "to plano"
+                            },
+                            {
+                                "indice": 28,
+                                "hex": "2067656E6572656E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " generen"
+                            },
+                            {
+                                "indice": 29,
+                                "hex": "20626C6F71756573",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " bloques"
+                            },
+                            {
+                                "indice": 30,
+                                "hex": "2064652063726970",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " de crip"
+                            },
+                            {
+                                "indice": 31,
+                                "hex": "746F6772616D6120",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "tograma "
+                            },
+                            {
+                                "indice": 32,
+                                "hex": "746F74616C6D656E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "totalmen"
+                            },
+                            {
+                                "indice": 33,
+                                "hex": "7465206469666572",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "te difer"
+                            },
+                            {
+                                "indice": 34,
+                                "hex": "656E746573206772",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "entes gr"
+                            },
+                            {
+                                "indice": 35,
+                                "hex": "616369617320616C",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "acias al"
+                            },
+                            {
+                                "indice": 36,
+                                "hex": "2075736F20646520",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " uso de "
+                            },
+                            {
+                                "indice": 37,
+                                "hex": "756E20566563746F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "un Vecto"
+                            },
+                            {
+                                "indice": 38,
+                                "hex": "7220646520496E69",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "r de Ini"
+                            },
+                            {
+                                "indice": 39,
+                                "hex": "6369616C697A6163",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "cializac"
+                            },
+                            {
+                                "indice": 40,
+                                "hex": "696F6E2028495629",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ion (IV)"
+                            },
+                            {
+                                "indice": 41,
+                                "hex": "2070736575646F61",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " pseudoa"
+                            },
+                            {
+                                "indice": 42,
+                                "hex": "6C6561746F72696F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "leatorio"
+                            },
+                            {
+                                "indice": 43,
+                                "hex": "207920616C20656E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " y al en"
+                            },
+                            {
+                                "indice": 44,
+                                "hex": "636164656E616D69",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "cadenami"
+                            },
+                            {
+                                "indice": 45,
+                                "hex": "656E746F2E030303",
+                                "es_relleno": true,
+                                "originales": 5,
+                                "relleno": 3,
+                                "ascii": "ento...."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "algoritmo": "3DES",
+                    "texto_original": "Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.",
+                    "clave_hex": "3276735E40BA2337683201386898B9547FDC5EDF7A5B1092",
+                    "iv_hex": "CADD503094BA2898",
+                    "texto_cifrado_hex": "C9F83121A930D6901A80142188008AB98E7E88C124D9F9575CD56BC39580725E9BAA7772DA9AC5571D7475A7A2137F7E1CE1F5360067FE29D7CB46450AB7221D7F41ED85608D94FF7CE121DB9AEC7F23132643CD726F63DFF1C1B30E135FFE79483FF0AD2951D00FDA5989140362F87CF0D5A852008DBE9DA851BF98208DE8D2927A86C3E93CE474292719C4112B0356D3AD02318A5460580D01E1FC5AD6291DFCA4F997EA2C1912B5967A3B1E6C8273DC1B764924CD9FAE176C19B0B83A84B8E87C9870A3D263B596D5C5FE04078E4914987BF3BC98A481A7413FDF6AB0D58B64133F4B66DEAC61802AF3E7B02EBE772E6E868DB4C761B16B39819C255780CDC9EE54A42DE055455666A67FCDF8268E3DF37F23F20F99DAE95E55F4F6E331C9C580E92F5F7F3017884DB92DD00AA159D559562451F6CD0E7242114974B0529A703CF9FBCA09E610D93A70302E80C9DB4D9CBCDD7EF9F8D0DBE7D6A347DA75A69A58F954F0A42771",
+                    "texto_descifrado": "Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.",
+                    "coincide": true,
+                    "tamano_clave_bits": 192,
+                    "tamano_bloque_bits": 64,
+                    "tiempo_cifrado_us": 13.4,
+                    "tiempo_descifrado_us": 14.5,
+                    "tiempo_total_us": 27.9,
+                    "analisis": {
+                        "longitud_caracteres": 357,
+                        "longitud_bytes": 357,
+                        "total_bloques": 45,
+                        "bytes_relleno": 3,
+                        "entropia_plano": 4.439,
+                        "entropia_criptograma": 7.361,
+                        "bloques": [
+                            {
+                                "indice": 1,
+                                "hex": "4C6F7320616C676F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "Los algo"
+                            },
+                            {
+                                "indice": 2,
+                                "hex": "7269746D6F732064",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ritmos d"
+                            },
+                            {
+                                "indice": 3,
+                                "hex": "6520636966726164",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "e cifrad"
+                            },
+                            {
+                                "indice": 4,
+                                "hex": "6F2073696D657472",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "o simetr"
+                            },
+                            {
+                                "indice": 5,
+                                "hex": "69636F20706F7220",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ico por "
+                            },
+                            {
+                                "indice": 6,
+                                "hex": "626C6F7175657320",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "bloques "
+                            },
+                            {
+                                "indice": 7,
+                                "hex": "636F6D6F20444553",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "como DES"
+                            },
+                            {
+                                "indice": 8,
+                                "hex": "2C20334445532079",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": ", 3DES y"
+                            },
+                            {
+                                "indice": 9,
+                                "hex": "2041455320747261",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " AES tra"
+                            },
+                            {
+                                "indice": 10,
+                                "hex": "6E73666F726D616E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "nsforman"
+                            },
+                            {
+                                "indice": 11,
+                                "hex": "20626C6F71756573",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " bloques"
+                            },
+                            {
+                                "indice": 12,
+                                "hex": "206465206461746F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " de dato"
+                            },
+                            {
+                                "indice": 13,
+                                "hex": "73207573616E646F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "s usando"
+                            },
+                            {
+                                "indice": 14,
+                                "hex": "20636C6176657320",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " claves "
+                            },
+                            {
+                                "indice": 15,
+                                "hex": "7365637265746173",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "secretas"
+                            },
+                            {
+                                "indice": 16,
+                                "hex": "20636F6D70617274",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " compart"
+                            },
+                            {
+                                "indice": 17,
+                                "hex": "696461732E20456C",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "idas. El"
+                            },
+                            {
+                                "indice": 18,
+                                "hex": "206D6F646F204342",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " modo CB"
+                            },
+                            {
+                                "indice": 19,
+                                "hex": "4320284369706865",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "C (Ciphe"
+                            },
+                            {
+                                "indice": 20,
+                                "hex": "7220426C6F636B20",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "r Block "
+                            },
+                            {
+                                "indice": 21,
+                                "hex": "436861696E696E67",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "Chaining"
+                            },
+                            {
+                                "indice": 22,
+                                "hex": "2920676172616E74",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": ") garant"
+                            },
+                            {
+                                "indice": 23,
+                                "hex": "697A612071756520",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "iza que "
+                            },
+                            {
+                                "indice": 24,
+                                "hex": "626C6F7175657320",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "bloques "
+                            },
+                            {
+                                "indice": 25,
+                                "hex": "6964656E7469636F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "identico"
+                            },
+                            {
+                                "indice": 26,
+                                "hex": "7320646520746578",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "s de tex"
+                            },
+                            {
+                                "indice": 27,
+                                "hex": "746F20706C616E6F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "to plano"
+                            },
+                            {
+                                "indice": 28,
+                                "hex": "2067656E6572656E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " generen"
+                            },
+                            {
+                                "indice": 29,
+                                "hex": "20626C6F71756573",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " bloques"
+                            },
+                            {
+                                "indice": 30,
+                                "hex": "2064652063726970",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " de crip"
+                            },
+                            {
+                                "indice": 31,
+                                "hex": "746F6772616D6120",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "tograma "
+                            },
+                            {
+                                "indice": 32,
+                                "hex": "746F74616C6D656E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "totalmen"
+                            },
+                            {
+                                "indice": 33,
+                                "hex": "7465206469666572",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "te difer"
+                            },
+                            {
+                                "indice": 34,
+                                "hex": "656E746573206772",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "entes gr"
+                            },
+                            {
+                                "indice": 35,
+                                "hex": "616369617320616C",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "acias al"
+                            },
+                            {
+                                "indice": 36,
+                                "hex": "2075736F20646520",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " uso de "
+                            },
+                            {
+                                "indice": 37,
+                                "hex": "756E20566563746F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "un Vecto"
+                            },
+                            {
+                                "indice": 38,
+                                "hex": "7220646520496E69",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "r de Ini"
+                            },
+                            {
+                                "indice": 39,
+                                "hex": "6369616C697A6163",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "cializac"
+                            },
+                            {
+                                "indice": 40,
+                                "hex": "696F6E2028495629",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "ion (IV)"
+                            },
+                            {
+                                "indice": 41,
+                                "hex": "2070736575646F61",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " pseudoa"
+                            },
+                            {
+                                "indice": 42,
+                                "hex": "6C6561746F72696F",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "leatorio"
+                            },
+                            {
+                                "indice": 43,
+                                "hex": "207920616C20656E",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": " y al en"
+                            },
+                            {
+                                "indice": 44,
+                                "hex": "636164656E616D69",
+                                "es_relleno": false,
+                                "originales": 8,
+                                "relleno": 0,
+                                "ascii": "cadenami"
+                            },
+                            {
+                                "indice": 45,
+                                "hex": "656E746F2E030303",
+                                "es_relleno": true,
+                                "originales": 5,
+                                "relleno": 3,
+                                "ascii": "ento...."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "algoritmo": "AES",
+                    "texto_original": "Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.",
+                    "clave_hex": "71C3F0BD91729B0361BDDFDF96384329DE86CE5EF4A5A9FAD827224BBECE528A",
+                    "iv_hex": "DE31929656ECF33D531E247C0C55283B",
+                    "texto_cifrado_hex": "156ACEAD3150E5C72B1F9DB89E101AFD78184450B8DD484D64F06934154518A7775747CD70BA1669C184F1B53C0DCFE612D32CE827E7DE49ADE3E967414F513DB0B622D00D9D1E10297782BF5C4FC4F546290F1FB212B13F3F95D9755F77128737251B11BD5B0F8B0F7B4093334599A97F509FB9C4F5DE7C9DAACD4798575BD9A82725061B66984C6D41A9BE642654E0568245B65D3137308822D7A183288D86C22096C2228F58B5F94A5D820BB80B379CF7ABB7C470096C6032F9E32883F7990A317956DB0A1CE9284300655988312CE7327245A4DDCEF385E935A1B254AEE707022BC674D5956C26BA8CA6A125206004AEA80D23976E3906B9EBCAD1E515F7038F08D28DE7179A632681A6CB79302BA003D93929E7CF5E048A3987471E91CB46985BEA6AE3B14DA861EE291A7F4EF7788A367042B482F8706A969E1E85D9028A2CAD772780D993E013206C26EBF2524BA65D8F05A0EADC5E5874F5717AD208FCA8F780CB8F6F6C994F346B144F3B93",
+                    "texto_descifrado": "Los algoritmos de cifrado simetrico por bloques como DES, 3DES y AES transforman bloques de datos usando claves secretas compartidas. El modo CBC (Cipher Block Chaining) garantiza que bloques identicos de texto plano generen bloques de criptograma totalmente diferentes gracias al uso de un Vector de Inicializacion (IV) pseudoaleatorio y al encadenamiento.",
+                    "coincide": true,
+                    "tamano_clave_bits": 256,
+                    "tamano_bloque_bits": 128,
+                    "tiempo_cifrado_us": 3.3,
+                    "tiempo_descifrado_us": 4.1,
+                    "tiempo_total_us": 7.4,
+                    "analisis": {
+                        "longitud_caracteres": 357,
+                        "longitud_bytes": 357,
+                        "total_bloques": 23,
+                        "bytes_relleno": 11,
+                        "entropia_plano": 4.439,
+                        "entropia_criptograma": 7.432,
+                        "bloques": [
+                            {
+                                "indice": 1,
+                                "hex": "4C6F7320616C676F7269746D6F732064",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "Los algoritmos d"
+                            },
+                            {
+                                "indice": 2,
+                                "hex": "65206369667261646F2073696D657472",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "e cifrado simetr"
+                            },
+                            {
+                                "indice": 3,
+                                "hex": "69636F20706F7220626C6F7175657320",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "ico por bloques "
+                            },
+                            {
+                                "indice": 4,
+                                "hex": "636F6D6F204445532C20334445532079",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "como DES, 3DES y"
+                            },
+                            {
+                                "indice": 5,
+                                "hex": "20414553207472616E73666F726D616E",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": " AES transforman"
+                            },
+                            {
+                                "indice": 6,
+                                "hex": "20626C6F71756573206465206461746F",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": " bloques de dato"
+                            },
+                            {
+                                "indice": 7,
+                                "hex": "73207573616E646F20636C6176657320",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "s usando claves "
+                            },
+                            {
+                                "indice": 8,
+                                "hex": "736563726574617320636F6D70617274",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "secretas compart"
+                            },
+                            {
+                                "indice": 9,
+                                "hex": "696461732E20456C206D6F646F204342",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "idas. El modo CB"
+                            },
+                            {
+                                "indice": 10,
+                                "hex": "43202843697068657220426C6F636B20",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "C (Cipher Block "
+                            },
+                            {
+                                "indice": 11,
+                                "hex": "436861696E696E672920676172616E74",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "Chaining) garant"
+                            },
+                            {
+                                "indice": 12,
+                                "hex": "697A612071756520626C6F7175657320",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "iza que bloques "
+                            },
+                            {
+                                "indice": 13,
+                                "hex": "6964656E7469636F7320646520746578",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "identicos de tex"
+                            },
+                            {
+                                "indice": 14,
+                                "hex": "746F20706C616E6F2067656E6572656E",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "to plano generen"
+                            },
+                            {
+                                "indice": 15,
+                                "hex": "20626C6F717565732064652063726970",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": " bloques de crip"
+                            },
+                            {
+                                "indice": 16,
+                                "hex": "746F6772616D6120746F74616C6D656E",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "tograma totalmen"
+                            },
+                            {
+                                "indice": 17,
+                                "hex": "7465206469666572656E746573206772",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "te diferentes gr"
+                            },
+                            {
+                                "indice": 18,
+                                "hex": "616369617320616C2075736F20646520",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "acias al uso de "
+                            },
+                            {
+                                "indice": 19,
+                                "hex": "756E20566563746F7220646520496E69",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "un Vector de Ini"
+                            },
+                            {
+                                "indice": 20,
+                                "hex": "6369616C697A6163696F6E2028495629",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": "cializacion (IV)"
+                            },
+                            {
+                                "indice": 21,
+                                "hex": "2070736575646F616C6561746F72696F",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": " pseudoaleatorio"
+                            },
+                            {
+                                "indice": 22,
+                                "hex": "207920616C20656E636164656E616D69",
+                                "es_relleno": false,
+                                "originales": 16,
+                                "relleno": 0,
+                                "ascii": " y al encadenami"
+                            },
+                            {
+                                "indice": 23,
+                                "hex": "656E746F2E0B0B0B0B0B0B0B0B0B0B0B",
+                                "es_relleno": true,
+                                "originales": 5,
+                                "relleno": 11,
+                                "ascii": "ento............"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "benchmark_promedios": {
+        "DES": {
+            "iteraciones": 100,
+            "promedio_cifrado_us": 5.17,
+            "promedio_descifrado_us": 5.89,
+            "promedio_total_us": 11.06
+        },
+        "3DES": {
+            "iteraciones": 100,
+            "promedio_cifrado_us": 7.27,
+            "promedio_descifrado_us": 8.14,
+            "promedio_total_us": 15.41
+        },
+        "AES": {
+            "iteraciones": 100,
+            "promedio_cifrado_us": 2.7,
+            "promedio_descifrado_us": 3.61,
+            "promedio_total_us": 6.31
+        }
+    },
+    "pruebas_seguridad": {
+        "clave_erronea": {
+            "error": "ValueError: Padding is incorrect.",
+            "mensaje": "Al usar una clave incorrecta, el descifrador genera bytes pseudoaleatorios. La función unpad rechaza el bloque final porque los bytes de relleno no cumplen PKCS#7."
+        },
+        "iv_erroneo": {
+            "error": null,
+            "mensaje": "En modo CBC: P1 = D(C1) ⊕ IV. Al cambiar el IV, ÚNICAMENTE el primer bloque queda destruido. Todos los bloques posteriores (bloque 2 en adelante) se recuperan con 100% de exactitud.",
+            "texto_corrupto": "�O�ki�O57�\u001d�\u0013�-icar resiliencia ante parametros invalidos."
+        }
+    }
+}

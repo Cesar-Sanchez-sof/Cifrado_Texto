@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoLab | Cifrado Simétrico DES, 3DES y AES</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Estilos locales -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between">
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-xl shadow-lg shadow-cyan-500/30">
+                    🔐
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                        CryptoLab <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">v2.0 PRO</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Laboratorio de Cifrado Simétrico: DES, 3DES y AES (Modo CBC + PKCS#7)</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> PyCryptodome 3.23 (Seguro)
+                </span>
+                <a href="#lab-ataques" class="text-xs text-slate-300 hover:text-cyan-400 transition bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700">
+                    🧪 Simular Fallos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="max-w-7xl mx-auto px-4 py-8 flex-1 w-full space-y-8">
+
+        <!-- PANEL DE ENTRADA Y CONTROLES -->
+        <section class="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-20 -top-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="space-y-4">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <label for="texto-input" class="text-sm font-semibold text-slate-200 flex items-center gap-2">
+                        <span>📝 Ingrese el texto a cifrar:</span>
+                        <span class="text-xs font-normal text-slate-400">(Obligatorio: mínimo 20 caracteres)</span>
+                    </label>
+                    <div id="char-badge" class="text-xs font-mono px-3 py-1 rounded-full bg-rose-500/15 text-rose-400 border border-rose-500/30 transition-all">
+                        0 / 20 caracteres
+                    </div>
+                </div>
+
+                <textarea id="texto-input" rows="3" 
+                    placeholder="Escriba aquí el texto plano que desea cifrar (mínimo 20 caracteres)..."
+                    class="w-full bg-slate-950 border border-slate-700 rounded-xl p-4 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 text-sm transition"></textarea>
+
+                <!-- BOTONES DE TEXTO RÁPIDO -->
+                <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+                    <span class="text-slate-400 font-medium">Textos de ejemplo rápidos:</span>
+                    <button onclick="cargarEjemplo(1)" class="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-md border border-slate-700 transition">
+                        📌 Ejemplo 1 (Básico)
+                    </button>
+                    <button onclick="cargarEjemplo(2)" class="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-md border border-slate-700 transition">
+                        🔤 Ejemplo 2 (Tildes & Ñ)
+                    </button>
+                    <button onclick="cargarEjemplo(3)" class="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-md border border-slate-700 transition">
+                        📜 Ejemplo 3 (Largo Multi-bloque)
+                    </button>
+                </div>
+
+                <!-- SELECCIÓN DE ALGORITMO -->
+                <div class="pt-4 border-t border-slate-800">
+                    <label class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3 block">
+                        Seleccione el algoritmo simétrico:
+                    </label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="algoritmo" value="AES" checked class="peer sr-only">
+                            <div class="p-4 rounded-xl border border-slate-700 bg-slate-950/60 peer-checked:border-cyan-500 peer-checked:bg-cyan-500/10 peer-checked:glow-cyan transition flex flex-col justify-between h-full">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-base font-bold text-white">AES-256</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold uppercase">Recomendado</span>
+                                </div>
+                                <p class="text-xs text-slate-400">Clave: 256 bits | Bloque: 128 bits. Estándar moderno de máxima seguridad.</p>
+                            </div>
+                        </label>
+
+                        <label class="cursor-pointer">
+                            <input type="radio" name="algoritmo" value="DES" class="peer sr-only">
+                            <div class="p-4 rounded-xl border border-slate-700 bg-slate-950/60 peer-checked:border-cyan-500 peer-checked:bg-cyan-500/10 peer-checked:glow-cyan transition flex flex-col justify-between h-full">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-base font-bold text-white">DES</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-semibold uppercase">Educativo</span>
+                                </div>
+                                <p class="text-xs text-slate-400">Clave: 64 bits (56 efect.) | Bloque: 64 bits. Histórico de 1977.</p>
+                            </div>
+                        </label>
+
+                        <label class="cursor-pointer">
+                            <input type="radio" name="algoritmo" value="3DES" class="peer sr-only">
+                            <div class="p-4 rounded-xl border border-slate-700 bg-slate-950/60 peer-checked:border-cyan-500 peer-checked:bg-cyan-500/10 peer-checked:glow-cyan transition flex flex-col justify-between h-full">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-base font-bold text-white">3DES</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-rose-500/20 text-rose-400 font-semibold uppercase">Obsoleto NIST</span>
+                                </div>
+                                <p class="text-xs text-slate-400">Clave: 192 bits (168 efect.) | Bloque: 64 bits. Tres pasadas DES.</p>
+                            </div>
+                        </label>
+
+                        <label class="cursor-pointer">
+                            <input type="radio" name="algoritmo" value="TODOS" class="peer sr-only">
+                            <div class="p-4 rounded-xl border border-slate-700 bg-slate-950/60 peer-checked:border-purple-500 peer-checked:bg-purple-500/10 transition flex flex-col justify-between h-full">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-base font-bold text-purple-300">⚡ Comparar Todos</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 font-semibold uppercase">Benchmark</span>
+                                </div>
+                                <p class="text-xs text-slate-400">Ejecuta DES, 3DES y AES simultáneamente y compara métricas.</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- BOTÓN PRINCIPAL DE ACCIÓN -->
+                <div class="pt-4 flex flex-wrap items-center gap-4">
+                    <button id="btn-procesar" onclick="procesarCifrado()" 
+                        class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-sm tracking-wide shadow-lg shadow-cyan-500/25 transition active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+                        <span>🔒</span> Cifrar y Descifrar Ahora
+                    </button>
+                    <span id="loading-spinner" class="hidden text-xs text-cyan-400 items-center gap-2">
+                        <svg class="animate-spin h-4 w-4 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                        Procesando criptografía en nanosegundos...
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENEDOR DE RESULTADOS DINÁMICOS -->
+        <div id="resultados-container" class="space-y-8 hidden">
+
+            <!-- TARJETAS DE RESULTADOS -->
+            <div id="cards-resultados" class="grid grid-cols-1 gap-6"></div>
+
+            <!-- COMPARATIVA Y GRÁFICO (SOLO CUANDO SE SELECCIONA 'TODOS') -->
+            <section id="seccion-grafico" class="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 shadow-xl hidden">
+                <div class="flex flex-wrap items-center justify-between mb-6 pb-4 border-b border-slate-800 gap-2">
+                    <div>
+                        <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                            📊 Benchmark Comparativo de Velocidad
+                        </h2>
+                        <p class="text-xs text-slate-400">Comparación de tiempos de cifrado y descifrado en microsegundos (µs)</p>
+                    </div>
+                    <div id="badge-mas-rapido" class="text-xs px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 font-semibold border border-cyan-500/30">
+                        Evaluando...
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+                    <div class="lg:col-span-2 h-72">
+                        <canvas id="graficoComparativo"></canvas>
+                    </div>
+                    <div id="tabla-resumen-comparativo" class="space-y-3 bg-slate-950 p-4 rounded-xl border border-slate-800">
+                        <!-- Llenado dinámico -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- INSPECTOR DE BLOQUES Y RELLENO PKCS#7 -->
+            <section id="seccion-bloques" class="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 shadow-xl">
+                <div class="flex flex-wrap items-center justify-between mb-4 pb-3 border-b border-slate-800 gap-2">
+                    <div>
+                        <h2 class="text-base font-bold text-white flex items-center gap-2">
+                            🧱 Inspector Didáctico de Bloques CBC y Relleno PKCS#7
+                        </h2>
+                        <p class="text-xs text-slate-400">Desglose exacto de cómo el texto fue rellenado y segmentado en bloques para el algoritmo</p>
+                    </div>
+                    <div id="resumen-bloques-badge" class="text-xs px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 font-mono"></div>
+                </div>
+                <div id="contenedor-bloques-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+            </section>
+
+            <!-- LABORATORIO DE ATAQUES Y PRUEBA DE FALLAS (SECCIÓN 6 PREGUNTA 3) -->
+            <section id="lab-ataques" class="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 shadow-xl">
+                <div class="flex flex-wrap items-center justify-between mb-4 pb-3 border-b border-slate-800 gap-2">
+                    <div>
+                        <h2 class="text-base font-bold text-amber-400 flex items-center gap-2">
+                            🧪 Laboratorio de Ataques: ¿Qué ocurre si la Clave o el IV son incorrectos?
+                        </h2>
+                        <p class="text-xs text-slate-400">Demostración en vivo de la Pregunta 3 de la Sección 6 del informe académico</p>
+                    </div>
+                    <button onclick="ejecutarSimulacionFalla()" class="px-4 py-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                        <span>⚡</span> Ejecutar Simulación de Falla
+                    </button>
+                </div>
+
+                <div id="resultado-fallas" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+                        <h3 class="text-sm font-bold text-rose-400 mb-1 flex items-center gap-2">
+                            <span>❌</span> Caso 1: Clave Incorrecta
+                        </h3>
+                        <p class="text-xs text-slate-400 mb-3">Se intenta descifrar el criptograma con una clave secreta generada al azar.</p>
+                        <div id="falla-clave-box" class="text-xs font-mono bg-slate-900 p-3 rounded-lg border border-slate-800 text-slate-300">
+                            Presione 'Ejecutar Simulación de Falla' para observar el comportamiento.
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+                        <h3 class="text-sm font-bold text-amber-400 mb-1 flex items-center gap-2">
+                            <span>⚠️</span> Caso 2: IV Incorrecto (Clave Correcta)
+                        </h3>
+                        <p class="text-xs text-slate-400 mb-3">En CBC: P₁ = D(C₁) ⊕ IV. Se altera el IV pero se mantiene la clave válida.</p>
+                        <div id="falla-iv-box" class="text-xs font-mono bg-slate-900 p-3 rounded-lg border border-slate-800 text-slate-300">
+                            Presione 'Ejecutar Simulación de Falla' para observar el comportamiento.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-6 text-center text-xs text-slate-500">
+        <p>Trabajo Práctico: Cifrado de Texto con Python • Algoritmos DES, 3DES y AES en Modo CBC con PKCS#7</p>
+        <p class="mt-1">Desarrollado para fines académicos y de evaluación criptográfica.</p>
+    </footer>
+
+    <!-- Script de lógica del cliente -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
